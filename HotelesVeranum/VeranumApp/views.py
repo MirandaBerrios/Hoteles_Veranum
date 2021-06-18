@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
+from .models_generado import Cliente
+from .forms import ClienteForm
 
-# Create your views here.
+
+def home(request):
+    return render(request, "VeranumApp/home.html")

@@ -1,5 +1,5 @@
 from pathlib import Path
-#from os import path
+from os import path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,7 +44,7 @@ ROOT_URLCONF = 'HotelesVeranum.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r'C:\Users\jocpa\Desktop\veranum\entornoVeranum\HotelesVeranum\VeranumApp\template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,6 +117,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
