@@ -44,7 +44,7 @@ ROOT_URLCONF = 'HotelesVeranum.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'C:\Users\jocpa\Desktop\veranum\entornoVeranum\HotelesVeranum\VeranumApp\template'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
