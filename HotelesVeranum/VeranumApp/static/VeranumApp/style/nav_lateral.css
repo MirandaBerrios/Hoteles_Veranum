@@ -1,0 +1,31 @@
+.item_nav {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: large;
+  color: white;
+  background-color: rgb(27, 92, 136);
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  border-radius: 1em;
+}
+
+.item_nav:hover {
+  background-color: white;
+  color: rgb(27, 92, 136);
+  border-radius: 1em;
+  border: solid 3px rgb(27, 92, 136);
+  text-decoration: none;
+}
+
+.navegador {
+  margin-left: 20px;
+  margin-top: 200px;
+  
+}
+
+.contenedor {
+  display: flex;
+  float: left;
+}

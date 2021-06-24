@@ -1,0 +1,43 @@
+.item_navbar{
+    display: flex;
+    float: left;
+    justify-self:flex-end ; 
+}
+
+nav{
+    height: 80px;
+    background-color: rgb(27,92,136);
+    position:absolute;
+    top: 0px;
+    width: 100%;
+    
+}
+
+nav h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.button_contacto {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: medium;
+    color: white;
+    background-color: rgb(23,78,115);
+    height: 2.5em;
+    width: 7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    border-style: none;
+  }
+  
+  .button_contacto:hover {
+    background-color: white;
+    color: rgb(27, 92, 136);
+    border-radius: 1em;
+    border: solid 3px rgb(27, 92, 136);
+    text-decoration: none;
+  }

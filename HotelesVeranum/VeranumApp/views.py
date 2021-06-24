@@ -7,6 +7,20 @@ def home(request):
     return render(request, "VeranumApp/home.html")
 
 
-def cliente_registro(request):
-    data = {"list": Cliente.objects.all().order_by('id_cliente')} 
-    return render(request, "VeranumApp/cliente_registro.html", data)
+def acerca_nosotros(request):
+    return render(request, "VeranumApp/acerca_nosotros.html")
+
+def contacto(request):
+    return render(request, "VeranumApp/contacto.html")
+
+def habitaciones(request):
+    return render(request, "VeranumApp/habitaciones.html")
+
+def iniciar_sesion(request):
+    return render(request, "VeranumApp/iniciar_sesion.html")
+
+def registrarse(request):
+    return render(request, "VeranumApp/registrarse.html")
+
+def restaurante(request):
+    return render(request, "VeranumApp/restaurante.html")

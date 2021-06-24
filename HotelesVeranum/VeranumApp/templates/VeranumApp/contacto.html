@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/VeranumApp/style/stylecontacto.css" />
+    <title>Hoteles Veranum</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/checkout/" />
+
+    <link rel="stylesheet" href="../../static/VeranumApp/bootstrap/bootstrap-4.6.0-examples/assets/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="../../static/VeranumApp/bootstrap/bootstrap-4.6.0-examples/checkout/form-validation.css" />
+    <link rel="stylesheet" href="../../static/VeranumApp/style/footer.css" />
+    <link rel="stylesheet" href="../../static/VeranumApp/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- META DATA -->
+    <link rel="stylesheet" href="../../static/VeranumApp/style/nav.css" />
+    <link rel="stylesheet" href="../../static/VeranumApp/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- COMIENZO NAV -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="../VeranumApp/home.html"><img src="../../static/VeranumApp/image/veranum_logo.png" width="70px" heigth="70px" alt="" /></a>
+    <a class="navbar-brand" href="../VeranumApp/home.html"><h1>Hoteles Veranum</h1></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link" href="../VeranumApp/contacto.html"><button class="button_contacto">contactenos</button></a>
+        <a class="nav-link" href="../VeranumApp/registrarse.html"><button class="button_contacto">registrarse</button></a>
+      </div>
+    </div>
+  </nav>
+  <!-- FIN NAV -->
+  </header>
+
+    <div class="container margenes-container col-9 rounded-lg pb-5 mt-5" style="background-color: rgb(245, 246, 250)">
+      <div class="py-5 text-center separacion">
+        <h2>Contáctenos</h2>
+        <p class="lead">Ingrese su información para contactar con nosotros</p>
+      </div>
+
+      <div class="col-md-8 order-md-1 centrado">
+        <h4 class="mb-3">Datos</h4>
+        <form class="needs-validation" validate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Nombre</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required />
+              <div class="invalid-feedback">Se requiere un nombre verificado.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Apellidos</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required />
+              <div class="invalid-feedback">Valid last name is required.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email">Correo electrónico </label>
+            <input type="email" class="form-control" id="email" placeholder="correo@correo.com" required />
+            <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="texto">Mensaje</label>
+            <textarea
+              id="texto"
+              placeholder="Mensaje"
+              style="margin: 0px 34.5px 16px 0px; height: 183px; margin: 542"
+              class="form-control altura-mensaje"
+            ></textarea>
+          </div>
+
+          <button class="btn-lg btn-block botonEnviar" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>ubicacion</h4>
+            <ul>
+              <li><p>Ricardo Matte Pérez 0270 Valparaiso</p></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>contacto</h4>
+            <ul>
+              <li><p>wsp:+56956872415</p></li>
+              <li><p>correo:Veranum@gmail.com</p></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>acceso rapido</h4>
+            <ul>
+              <li><a href="../VeranumApp/home.html">inicio</a></li>
+              <li><a href="../VeranumApp/habitaciones.html">habitaciones</a></li>
+              <li><a href="../VeranumApp/restaurante.html">restaurante</a></li>
+              <li><a href="../VeranumApp/acerca_nosotros.html">acerca de nostros</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Redes sociales</h4>
+            <div class="social-links">
+              <a href="https://es-la.facebook.com/pg/hotelcesarnic/posts/?ref=page_internal"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://twitter.com/sheratonhotels?lang=es"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/sheratonscl/?hl=es-la"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

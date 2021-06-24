@@ -1,7 +1,3 @@
-.altura-mensaje{
-    min-height: 100px;
-}
-
 .margenes-container{
     margin-bottom: 5%;
 }
@@ -15,7 +11,16 @@
     margin-top: 100px;
 }
 
-.botonEnviar{
+
+.desactive{
+    display: none;
+}
+
+.activate{
+    display: visible;
+}
+
+.botonRegistrarse{
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     background-color: rgb(27, 92, 136);
@@ -23,7 +28,7 @@
     
 }
 
-.botonEnviar:hover{
+.botonRegistrarse:hover{
     background-color: white;
     color: rgb(27, 92, 136);
     border-color: rgb(27, 92, 136);
