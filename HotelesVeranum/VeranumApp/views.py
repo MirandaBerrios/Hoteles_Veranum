@@ -1,11 +1,10 @@
 from django.shortcuts import render , redirect
-from .models_generado import Cliente
+from .models_generado import Cliente , Habitacion , Menu
 from .forms import ClienteForm
 
 
 def home(request):
     return render(request, "VeranumApp/home.html")
-
 
 def acerca_nosotros(request):
     return render(request, "VeranumApp/acerca_nosotros.html")
@@ -23,4 +22,6 @@ def registrarse(request):
     return render(request, "VeranumApp/registrarse.html")
 
 def restaurante(request):
-    return render(request, "VeranumApp/restaurante.html")
+    data = {"list": Menu.objects.all().order_by('id_plato')}
+    return render(request, "VeranumApp/restaurante.html", data)
+

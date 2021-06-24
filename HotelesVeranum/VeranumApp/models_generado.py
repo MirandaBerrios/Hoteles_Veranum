@@ -78,17 +78,13 @@ class AuthUserUserPermissions(models.Model):
 
 
 class Cliente(models.Model):
-    id_cliente = models.FloatField(primary_key=True)
-    id_boleta = models.FloatField(blank=True, null=True)
-    primer_nombre = models.CharField(max_length=15)
-    segundo_nombre = models.CharField(max_length=15, blank=True, null=True)
-    apellido_paterno = models.CharField(max_length=20)
-    apellido_materno = models.CharField(max_length=20)
-    rut = models.FloatField()
-    d_verificador = models.CharField(max_length=1)
+    nombre = models.CharField(max_length=15)
+    apellido = models.CharField(max_length=20)
+    usuario_pasajero = models.CharField(primary_key=True, max_length=20)
+    contrasena = models.CharField(max_length=20)
+    correo_electronico = models.CharField(max_length=50)
     direccion_1 = models.CharField(max_length=30)
     direccion_2 = models.CharField(max_length=30, blank=True, null=True)
-    telefono_cli = models.CharField(max_length=30, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -138,3 +134,29 @@ class DjangoSession(models.Model):
     class Meta:
         managed = False
         db_table = 'django_session'
+
+
+class Habitacion(models.Model):
+    id_habitacion = models.CharField(primary_key=True, max_length=3)
+    num_habitacion = models.FloatField(blank=True, null=True)
+    piso = models.CharField(max_length=2, blank=True, null=True)
+    num_camas = models.FloatField(blank=True, null=True)
+    num_cuartos = models.FloatField(blank=True, null=True)
+    valor_noche = models.FloatField(blank=True, null=True)
+    capacidad_pasajeros = models.FloatField(blank=True, null=True)
+    disponibilidad = models.CharField(max_length=1, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'habitacion'
+
+
+class Menu(models.Model):
+    id_plato = models.CharField(primary_key=True, max_length=3)
+    nombre_plato = models.CharField(max_length=40)
+    precio_plato = models.IntegerField()
+    descripcion_plato = models.CharField(max_length=100)
+
+    class Meta:
+        managed = False
+        db_table = 'menu'

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,8 +35,8 @@
     <header>
         <!-- COMIENZO NAV -->
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="../VeranumApp/home.html"><img src="../../static/VeranumApp/image/veranum_logo.png" width="70px" heigth="70px" alt="" /></a>
-      <a class="navbar-brand" href="../VeranumApp/home.html"><h1>Hoteles Veranum</h1></a>
+      <a class="navbar-brand" href="{% url 'home' %}"><img src="../../static/VeranumApp/image/veranum_logo.png" width="70px" heigth="70px" alt="" /></a>
+      <a class="navbar-brand" href="{% url 'home' %}"><h1>Hoteles Veranum</h1></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -49,8 +50,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-link" href="../VeranumApp/contacto.html"><button class="button_contacto">contactenos</button></a>
-          <a class="nav-link" href="../VeranumApp/registrarse.html"><button class="button_contacto">registrarse</button></a>
+          <a class="nav-link" href="{% url 'contacto' %}"><button class="button_contacto">contactenos</button></a>
+          <a class="nav-link" href="{% url 'registrarse' %}"><button class="button_contacto">registrarse</button></a>
         </div>
       </div>
     </nav>
@@ -60,10 +61,10 @@
     <!-- MENU LATERAL -->
     <div class="container-fluid d-lg-flex d-xl-flex d-md-flex">
       <div class="navegador col-sm-12 col-md-12 col-lg-2 col-xl-2">
-        <a href="../VeranumApp/home.html" class="item_nav">Inicio</a>
-        <a href="../VeranumApp/habitaciones.html" class="item_nav">Habitaciones</a>
-        <a href="../VeranumApp/restaurante.html" class="item_nav">Restaurante</a>
-        <a href="../VeranumApp/acerca_nosotros.html" class="item_nav">Acerca de nosotros</a>
+        <a href="{% url 'home' %}" class="item_nav">Inicio</a>
+        <a href="{% url 'habitaciones' %}" class="item_nav">Habitaciones</a>
+        <a href="{% url 'restaurante' %}" class="item_nav">Restaurante</a>
+        <a href="{% url 'acerca_nosotros' %}" class="item_nav">Acerca de nosotros</a>
       </div>
       <!-- FIN MENU LATERAL -->
       <!-- CUERPO REAL PAGINA -->
@@ -325,10 +326,10 @@
           <div class="footer-col">
             <h4>acceso rapido</h4>
             <ul>
-              <li><a href="../VeranumApp/home.html">inicio</a></li>
-              <li><a href="../VeranumApp/habitaciones.html">habitaciones</a></li>
-              <li><a href="../VeranumApp/restaurante.html">restaurante</a></li>
-              <li><a href="../VeranumApp/acerca_nosotros.html">acerca de nostros</a></li>
+              <li><a href="{% url 'home' %}">inicio</a></li>
+              <li><a href="{% url 'habitaciones' %}">habitaciones</a></li>
+              <li><a href="{% url 'restaurante' %}">restaurante</a></li>
+              <li><a href="{% url 'acerca_nosotros' %}">acerca de nostros</a></li>
             </ul>
           </div>
           <div class="footer-col">
