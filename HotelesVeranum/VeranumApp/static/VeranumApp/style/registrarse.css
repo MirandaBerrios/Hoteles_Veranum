@@ -33,3 +33,12 @@
     color: rgb(27, 92, 136);
     border-color: rgb(27, 92, 136);
 }
+
+.mensaje{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    color: rgb(82,134,55);
+}
+.cuadro_msg{
+    text-align: center;
+}

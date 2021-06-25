@@ -1,4 +1,6 @@
+<!-- CARGAMOS LA CARPETA STATIC, CARGAMOS EL MÓDULO CRISPY -->
 {% load static %}
+{% load crispy_forms_tags %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../static/VeranumApp/style/registrarse.css" rel="stylesheet">
-    <title>Mercado Artesanos</title>
+    <title>Hoteles Veranum</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/checkout/">
 
     <!-- Bootstrap core CSS -->
@@ -48,7 +50,7 @@
      crossorigin="anonymous"
    ></script>
    <!-- FIN META DATA -->
-
+</head>
 <body >
   <header>
     <!-- COMIENZO NAV -->
@@ -76,7 +78,6 @@
 <!-- FIN NAV -->
 </header>
 
-
     <div class="container margenes-container col-9 rounded-lg pb-5 mt-5" style="background-color: rgb(245, 246, 250);">
         <div class="py-5 text-center separacion">
             <h2>Registro</h2>           
@@ -85,130 +86,20 @@
 
           <div class="col-md-8 order-md-1 centrado">
             <h4 class="mb-3">Datos</h4>
-            <form class="needs-validation" validate>
-                <div class="row">
-                <div class="col-md-6 mb-3"> 
-                    <label for="firstName">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                    ingrese un nombre valido
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="apellidos">Apellidos</label>
-                    <input type="text" class="form-control" id="apellidos" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                    Ingrese un apellido valido
-                    </div>
-                </div>
-                </div>
-
-                <div class="mb-3">
-                <label for="nombreUsuario">Nombre de pajasero</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                    <span class="input-group-text">@</span>
-                    </div>
-                    <input type="text" class="form-control" id="nombreUsuario" placeholder="Nombre de usuario" required>
-                    <div class="invalid-feedback" style="width: 100%;">
-                    Your username is required.
-                    </div>
-                </div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="contraseña">Establezca su contraseña</label>
-                  <input type="password" class="form-control" id="contraseña" placeholder="Contraseña" required>
-                    <div class="desactive" id="mensajeContra">
-                      <p style="font-size: larger;">Su contraseña debe contener al menos 5 caracteres</p>
-                    </div>
-                    
-                   <div class="custom-control custom-checkbox"> 
-                    <input type="checkbox" class="custom-control-input" id="mostrarcontraseña" oninput="mostrarContraseña()">
-                    <label class="custom-control-label" for="mostrarcontraseña">Mostrar contraseña</label>
-                  </div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="recontraseña">Repita su contraseña</label>
-                  <input type="password" class="form-control" id="recontraseña" placeholder="Contraseña" required>
-                  <div class="desactive" id="mensajeRecontra">
-                      <h3>Ambas contraseñas deben coincidir.<h3>
-                  </div>
-                  
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="mostrarrecontraseña" oninput="mostrarRecontraseña()">
-                    <label class="custom-control-label" for="mostrarrecontraseña">Mostrar contraseña</label>
-                  </div>
-                  </div>
-
-                <div class="mb-3">
-                <label for="email">Correo electrónico <span class="text-muted">(Opcional)</span></label>
-                <input type="email" class="form-control" id="email" placeholder="correo@correo.com">
-                <div class="invalid-feedback">
-                    Porfavor ingrese un correo electrónico valido.
-                </div>
-                </div>
-
-                <div class="mb-3">
-                <label for="dirección">Dirección</label>
-                <input type="text" class="form-control" id="dirección" placeholder="calle 1234" required>
-                <div class="invalid-feedback">
-                    Porfavor ingrese su dirección de envío.
-                </div>
-                </div>
-
-                <div class="mb-3">
-                <label for="dirección2">Segunda dirección <span class="text-muted">(Opcional)</span></label>
-                <input type="text" class="form-control" id="dirección2" placeholder="casa o departamento">
-                </div>
-
-                <div class="row">
-                <div class="col-md-5 mb-3">
-                    <label for="país">Región</label>
-                    <select class="custom-select d-block w-100" id="Regiones" name="Regiones" required> 
-                      <!-- con el atributo name podremos saber que región se seleccionará -->
-                    <option disabled selected value="">Seleccionar...</option>
-                    </select>
-                    <div class="invalid-feedback">
-                    Porfavor selecione un país valido.
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Provincias">Provincias</label>
-                    <select class="custom-select d-block w-100" id="Provincias" required>
-                    <option disabled selected value="">Seleccionar...</option>
-                    </select>
-                    <div class="invalid-feedback">
-                    Porfavor ingrese una ciudad valida.
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="Comuna">Comuna</label>
-                    <select class="custom-select d-block w-100" id="Comunas" required>
-                    <option disabled selected value="">Seleccionar...</option>
-                    </select>
-                    <div class="invalid-feedback">
-                    Porfavor ingrese una comuna valida.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="codigoPostal">Codigo postal</label>
-                    <input type="text" class="form-control" id="codigoPostal" placeholder="83200000" required>
-                    <div class="invalid-feedback">
-                    Codigo postal requerido.
-                    </div>
-                </div>
-                </div>
-                <hr class="mb-4">
-                <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="mismaDirección">
-                <label class="custom-control-label" for="mismaDirección">Utilizar esta dirección para futuros pedidos.</label>
-                </div>
-                <hr class="mb-4">
-                <button class="btn-lg btn-block botonRegistrarse" 
+            
+            {% if form %}
+            <form method="POST" action="" enctype="multipart/form-data" id="formulario" class="needs-validation" validate>
+              <div class="form-group">
+                {% csrf_token %} {{form|crispy}}
+              </div>
+               
+                {% if form %}
+                <div class="cuadro_msg alert-success mensaje">  {{ mesg }} </div>
+                {% endif %}
+                <button  class="btn-lg btn-block botonRegistrarse" 
                 type="submit" id="btnEnviar">Registrarse</button>
-            </form>
+              </form>
+            {% endif %}
           </div>
         </div>
 
