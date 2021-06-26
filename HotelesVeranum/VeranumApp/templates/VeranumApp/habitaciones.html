@@ -1,240 +1,186 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>habitaciones</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/product/" />
-    <link rel="stylesheet" href="../../static/VeranumApp/style/habitaciones.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-      crossorigin="anonymous"
-    />
-    <!-- Bootstrap core CSS -->
-    <link
-      href="../../static/VeranumApp/bootstrap/bootstrap-4.6.0-examples/assets/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>habitaciones</title>
 
-    <!-- META DATA -->
-    <link rel="stylesheet" href="../../static/VeranumApp/style/footer.css" />
-    <link rel="stylesheet" href="../bootstrap/bootstrap-4.6.0-dist/css/bootstrap.min.css.map" />
-    <link rel="stylesheet" href="../../static/VeranumApp/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/product/" />
+  <link rel="stylesheet" href="../../static/VeranumApp/style/habitaciones.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+  <!-- Bootstrap core CSS -->
+  <link href="../../static/VeranumApp/bootstrap/bootstrap-4.6.0-examples/assets/dist/css/bootstrap.min.css"
+    rel="stylesheet" />
+  <!-- style tarjetas-->
+  <link rel="stylesheet" href="../../static/VeranumApp/style/home.css">
+  <link rel="stylesheet" href="../../static/VeranumApp/style/nav_lateral.css">
 
-    <!-- FIN META DATA -->
-    <link rel="stylesheet" href="../../static/VeranumApp/style/nav.css" />
-    <link rel="stylesheet" href="../../static/VeranumApp/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- COMIENZO NAV -->
-      <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="{% url 'home' %}"
-          ><img src="../../static/VeranumApp/image/veranum_logo.png" width="70px" heigth="70px" alt=""
-        /></a>
-        <a class="navbar-brand" href="{% url 'home' %}"><h1>Hoteles Veranum</h1></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto">
-            <a class="nav-link" href="{% url 'contacto' %}"><button class="button_contacto">contactenos</button></a>
-            <a class="nav-link" href="{% url 'registrarse' %}"><button class="button_contacto">registrarse</button></a>
-          </div>
-        </div>
-      </nav>
-      <!-- FIN NAV -->
-    </header>
-    <div class="titulo col-9">
-      <div class="">habitaciones:</div>
-    </div>
-
-    <div class="buscar mb-5 col-9">
-      <form action="../../form-result.php" method="post" target="_blank">
-        <div class="buscar">
-          Búsqueda de habitacion:
-          <input type="search" name="busquedahabitacion" placeholder="disponibilidad,piso,camas..." />
-
-          <input type="submit" value="Buscar" />
-        </div>
-      </form>
-    </div>
+  <!-- META DATA -->
+  <link rel="stylesheet" href="../../static/VeranumApp/style/footer.css" />
+  <link rel="stylesheet" href="../bootstrap/bootstrap-4.6.0-dist/css/bootstrap.min.css.map" />
+  <link rel="stylesheet" href="../../static/VeranumApp/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
 
 
-    <div class="habitacion col-9">
-      <div class="card-deck">
-        <div class="card">
-          <img
-            src="../../static/VeranumApp/image/habitacion1persona.jpg"
-            class="card-img-top imagen_habitacion"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Individual:</h5>
-            <p class="card-text">
-              Una habitación asignada a una persona. Puede tener una o más camas. El tamaño de la habitación o el área
-              de las habitaciones individuales son generalmente de 37 m² a 45 m².
-            </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="../../static/VeranumApp/image/habitacionMatrimonial.jpg"
-            class="card-img-top imagen_habitacion"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Suite Ejecutiva:</h5>
-            <p class="card-text">
-              Es un salón o sala de estar, conectado a una o más habitaciones. (Una habitación con uno o más dormitorios
-              y una sala de estar separada.) El tamaño de la habitación o el área de las habitaciones Suite son
-              generalmente entre 70 m² y 100 m².
-            </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="../../static/VeranumApp/image/habitacioneconomica.jpg"
-            class="card-img-top imagen_habitacion"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">King:</h5>
-            <p class="card-text">
-              Nuestras habitaciones cuentan con 50 mt² y todo lo necesario para una placentera y eficiente estadía.
-              Amplias habitaciones con servibar, escritorio, conexión a Internet televisores de 43 pulgadas, baño
-              privado con ducha, camas King/queen, cajas de seguridad. Amplias habitaciones con 2 ambientes.
-            </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
+  <!-- FIN META DATA -->
+  <link rel="stylesheet" href="../../static/VeranumApp/style/nav.css" />
+  <link rel="stylesheet" href="../../static/VeranumApp/bootstrap/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <!-- COMIENZO NAV -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="{% url 'home' %}"><img src="../../static/VeranumApp/image/veranum_logo.png"
+          width="70px" heigth="70px" alt="" /></a>
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <h1>Hoteles Veranum</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link" href="{% url 'contacto' %}"><button class="button_contacto">contactenos</button></a>
+          <a class="nav-link" href="{% url 'registrarse' %}"><button class="button_contacto">registrarse</button></a>
         </div>
       </div>
-    </div>
-    <div class="habitacion col-9">
-      <div class="card-deck">
-        <div class="card">
-          <img
-            src="../../static/VeranumApp/image/habitacion1persona.jpg"
-            class="card-img-top imagen_habitacion"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Suite:</h5>
-            <p class="card-text">
-              Cuenta con los espacios necesarios para hacer de su estadía la mas confortable y placentera, ideal para
-              viajes familiares ya que cuenta con dos ambientes (sala de estar y dormitorio con dos camas King), en la
-              habitación cuenta con servibar, escritorio, conexión a internet, televisores de 43 pulgadas, baño privado
-              con ducha y tina, camas King/queen, cajas de seguridad.
-            </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
+    </nav>
+    <!-- FIN NAV -->
+  </header>
+  <div class="titulo col-9">
+    <div class="">habitaciones</div>
+  </div>
 
-        <div class="card">
-          <img
-            src="../../static/VeranumApp/image/habitacionMatrimonial.jpg"
-            class="card-img-top imagen_habitacion"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">habitacion especial:</h5>
-            <p class="card-text">
-              Este tipo de habitación ofrece habitaciones con instalaciones para personas con problemas de movilidad
-              Este tipo de habitación ofrece habitaciones con instalaciones para personas con problemas de movilidad con
-              duchas con acceso para sillas de ruedas Este tipo de habitación no ofrece habitaciones con instalaciones
-              para personas con problemas de audición
-            </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="../../static/VeranumApp/image/habitacioneconomica.jpg"
-            class="card-img-top imagen_habitacion"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">vip:</h5>
-            <p class="card-text">
-              Excelente servicio por parte del Hotel Militar, sus enormes habitaciones Vip hacen que uno se sienta casi
-              de la realeza. Calefacción central, TV satelital, wifi y estacionamiento privado. El hotel cuenta con
-              personal con muy buena disposición.
-            </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col">
-            <h4>ubicacion</h4>
-            <ul>
-              <li><p>Ricardo Matte Pérez 0270 Valparaiso</p></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>contacto</h4>
-            <ul>
-              <li><p>wsp:+56956872415</p></li>
-              <li><p>correo:Veranum@gmail.com</p></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>acceso rapido</h4>
-            <ul>
-              <li><a href="{% url 'home' %}">inicio</a></li>
-              <li><a href="{% url 'habitaciones' %}">habitaciones</a></li>
-              <li><a href="{% url 'restaurante' %}">restaurante</a></li>
-              <li><a href="{% url 'acerca_nosotros' %}">acerca de nostros</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Redes sociales</h4>
-            <div class="social-links">
-              <a href="https://es-la.facebook.com/pg/hotelcesarnic/posts/?ref=page_internal"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="https://twitter.com/sheratonhotels?lang=es"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/sheratonscl/?hl=es-la"><i class="fab fa-instagram"></i></a>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="cold-9 search">
+        <form method="GET">
+          <div id="custom-search-input">
+            <div class="input-group col-md-12">
+              <input type="text" class="form-control" placeholder="Ingrese un piso , precio" name="buscar">
+              <span class="input-group-list">
+                <button type="submit" class="boton btn-success">buscar</button>
+
+              </span>
             </div>
           </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container-fluid d-lg-flex d-xl-flex d-md-flex">
+    <div class="navegador col-sm-12 col-md-12 col-lg-2 col-xl-2">
+      <a href="{% url 'home' %}" class="item_nav">Inicio</a>
+      <a href="{% url 'habitaciones' %}" class="item_nav">Habitaciones</a>
+      <a href="{% url 'restaurante' %}" class="item_nav">Restaurante</a>
+      <a href="{% url 'acerca_nosotros' %}" class="item_nav">Acerca de nosotros</a>
+    </div>
+    <!-- FIN MENU LATERAL -->
+    <!-- CUERPO REAL PAGINA -->
+    <div class="cuerpo mt-5">
+      <div class="row container_tarjetas col-md-10 col-lg-10 col-sm-12 col-xs-12">
+
+        {% for ha in habitaciones %}
+        <!-- INICIO TARJETA-->
+        <div class="container_habitacion col-lg-4 col-sm-12 col-md-6">
+          <div class="campos_tarjeta cont_imagen">
+            <img class="imagen" src="../../static/VeranumApp/image/habitacion vip.jpg" alt="" />
+          </div>
+          <div class="campos_tarjeta titulo">
+            <h3>{{ ha.titulo }}</h3>
+          </div>
+          <div class="campos_tarjeta descripcion">{{ ha.descripcion }}
+          </div>
+          <div class="campos_tarjeta camas"> {{ ha.num_camas }} Camas</div>
+          <div class="campos_tarjeta servicios">{{ ha.num_cuartos }} Cuartos</div>
+          <div class="campos_tarjeta estadia">Precio ${{ ha.valor_noche }}</div>
+          <div class="campos_tarjeta piso">Piso {{ ha.piso }}</div>
+          <div class="campos_tarjeta disponibilidad">disponibilidad {{ ha.disponibilidad }}</div>
+          
+          <div class="campos_tarjeta reservar"><button class="button_reserva">reservar</button></div>
+        </div>
+        <!-- FIN TARJETA -->
+        {% endfor %}
+      </div>
+
+
+
+
+      <!-- FIN TABLA CONFICIONES  -->
+    </div>
+    <!-- FIN CUERPO REAL PAGINA -->
+  </div>
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>ubicacion</h4>
+          <ul>
+            <li>
+              <p>Ricardo Matte Pérez 0270 Valparaiso</p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>contacto</h4>
+          <ul>
+            <li>
+              <p>wsp:+56956872415</p>
+            </li>
+            <li>
+              <p>correo:Veranum@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>acceso rapido</h4>
+          <ul>
+            <li><a href="{% url 'home' %}">inicio</a></li>
+            <li><a href="{% url 'habitaciones' %}">habitaciones</a></li>
+            <li><a href="{% url 'restaurante' %}">restaurante</a></li>
+            <li><a href="{% url 'acerca_nosotros' %}">acerca de nostros</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Redes sociales</h4>
+          <div class="social-links">
+            <a href="https://es-la.facebook.com/pg/hotelcesarnic/posts/?ref=page_internal"><img height="50px"
+                src="../../static/VeranumApp/image/facebook.png"></i></a>
+            <a href="https://twitter.com/sheratonhotels?lang=es"><img height="50px"
+                src="../../static/VeranumApp/image/gorjeo.png"></img></a>
+            <a href="https://www.instagram.com/sheratonscl/?hl=es-la"><img height="50px"
+                src="../../static/VeranumApp/image/instagram.png"></i></a>
+          </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>

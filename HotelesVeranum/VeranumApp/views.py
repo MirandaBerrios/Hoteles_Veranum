@@ -3,10 +3,13 @@ from django.shortcuts import render, redirect
 from .models_generado import Cliente, Habitacion, Menu
 from .forms import ClienteForm
 from django.contrib import messages
+from django.db.models import Q
+
 
 
 def home(request):
     return render(request, "VeranumApp/home.html")
+
 
 
 def acerca_nosotros(request):
@@ -18,7 +21,17 @@ def contacto(request):
 
 
 def habitaciones(request):
-    return render(request, "VeranumApp/habitaciones.html",)
+    busqueda = request.GET.get("buscar")
+    habitaciones = Habitacion.objects.all()
+
+    if busqueda:
+         habitaciones = Habitacion.objects.filter(
+            Q(piso = busqueda) |
+            Q(valor_noche = busqueda) 
+
+
+         ).distinct()
+    return render(request, "VeranumApp/habitaciones.html",{'habitaciones':habitaciones})
 
 
 def iniciar_sesion(request):
