@@ -6,10 +6,9 @@ from django.contrib import messages
 from django.db.models import Q
 
 
-
 def home(request):
-    return render(request, "VeranumApp/home.html")
-
+    data = {'habitaciones': Habitacion.objects.all()[0:6]}
+    return render(request, "VeranumApp/home.html" , data)
 
 
 def acerca_nosotros(request):
@@ -23,15 +22,12 @@ def contacto(request):
 def habitaciones(request):
     busqueda = request.GET.get("buscar")
     habitaciones = Habitacion.objects.all()
-
     if busqueda:
-         habitaciones = Habitacion.objects.filter(
-            Q(piso = busqueda) |
-            Q(valor_noche = busqueda) 
-
-
-         ).distinct()
-    return render(request, "VeranumApp/habitaciones.html",{'habitaciones':habitaciones})
+        habitaciones = Habitacion.objects.filter(
+            Q(piso=busqueda) |
+            Q(valor_noche=busqueda)
+        ).distinct()
+    return render(request, "VeranumApp/habitaciones.html", {'habitaciones': habitaciones})
 
 
 def iniciar_sesion(request):
@@ -51,8 +47,7 @@ def registrarse(request):
                 data["mesg"] = e
         else:
             form = ClienteForm
-    return render(request, "VeranumApp/registrarse.html", data )
-
+    return render(request, "VeranumApp/registrarse.html", data)
 
 
 def restaurante(request):

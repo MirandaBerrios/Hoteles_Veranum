@@ -57,7 +57,6 @@
     </nav>
     <!-- FIN NAV -->
     </header>
-
     <!-- MENU LATERAL -->
     <div class="container-fluid d-lg-flex d-xl-flex d-md-flex">
       <div class="navegador col-sm-12 col-md-12 col-lg-2 col-xl-2">
@@ -70,110 +69,28 @@
       <!-- CUERPO REAL PAGINA -->
       <div class="cuerpo mt-5">
         <div class="row container_tarjetas col-md-10 col-lg-10 col-sm-12 col-xs-12">
+          {% for ha in habitaciones %}
           <!-- INICIO TARJETA-->
           <div class="container_habitacion col-lg-4 col-sm-12 col-md-6">
             <div class="campos_tarjeta cont_imagen">
               <img class="imagen" src="../../static/VeranumApp/image/habitacion vip.jpg" alt="" />
             </div>
-            <div class="campos_tarjeta titulo"><h3> {{ ha.titulo }}</h3></div>
-            <div class="campos_tarjeta descripcion">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolores eveniet cum officiis mollitia
-              omnis? Rerum sunt voluptates delectus minus deserunt aut possimus, maiores suscipit modi voluptas laborum!
-              Error, quae!
+            <div class="campos_tarjeta titulo">
+              <h3>{{ ha.titulo }}</h3>
             </div>
-            <div class="campos_tarjeta camas">1 cama king</div>
-            <div class="campos_tarjeta servicios">desayuno continental</div>
-            <div class="campos_tarjeta estadia">4 días y 3 noches</div>
+            <div class="campos_tarjeta descripcion">{{ ha.descripcion }}
+            </div>
+            <div class="campos_tarjeta camas"> {{ ha.num_camas }} Camas</div>
+            <div class="campos_tarjeta servicios">{{ ha.num_cuartos }} Cuartos</div>
+            <div class="campos_tarjeta estadia">Precio ${{ ha.valor_noche }}</div>
+            <div class="campos_tarjeta piso">Piso {{ ha.piso }}</div>
+            <div class="campos_tarjeta disponibilidad">disponibilidad {{ ha.disponibilidad }}</div>
+            
             <div class="campos_tarjeta reservar"><button class="button_reserva">reservar</button></div>
           </div>
           <!-- FIN TARJETA -->
-          <!-- INICIO TARJETA-->
-          <div class="container_habitacion col-lg-4 col-sm-12 col-md-6">
-            <div class="campos_tarjeta cont_imagen">
-              <img class="imagen" src="../../static/VeranumApp/image/habitacion vip.jpg" alt="" />
-            </div>
-            <div class="campos_tarjeta titulo"><h3>habitacion x</h3></div>
-            <div class="campos_tarjeta descripcion">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolores eveniet cum officiis mollitia
-              omnis? Rerum sunt voluptates delectus minus deserunt aut possimus, maiores suscipit modi voluptas laborum!
-              Error, quae!
-            </div>
-            <div class="campos_tarjeta camas">1 cama king</div>
-            <div class="campos_tarjeta servicios">desayuno continental</div>
-            <div class="campos_tarjeta estadia">4 días y 3 noches</div>
-            <div class="campos_tarjeta reservar"><button class="button_reserva">reservar</button></div>
-          </div>
-          <!-- FIN TARJETA -->
-          <!-- INICIO TARJETA-->
-          <div class="container_habitacion col-lg-4 col-sm-12 col-md-6">
-            <div class="campos_tarjeta cont_imagen">
-              <img class="imagen" src="../../static/VeranumApp/image/habitacion vip.jpg" alt="" />
-            </div>
-            <div class="campos_tarjeta titulo"><h3>habitacion x</h3></div>
-            <div class="campos_tarjeta descripcion">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolores eveniet cum officiis mollitia
-              omnis? Rerum sunt voluptates delectus minus deserunt aut possimus, maiores suscipit modi voluptas laborum!
-              Error, quae!
-            </div>
-            <div class="campos_tarjeta camas">1 cama king</div>
-            <div class="campos_tarjeta servicios">desayuno continental</div>
-            <div class="campos_tarjeta estadia">4 días y 3 noches</div>
-            <div class="campos_tarjeta reservar"><button class="button_reserva">reservar</button></div>
-          </div>
-          <!-- FIN TARJETA -->
-          <!-- INICIO TARJETA-->
-          <div class="container_habitacion col-lg-4 col-sm-12 col-md-6">
-            <div class="campos_tarjeta cont_imagen">
-              <img class="imagen" src="../../static/VeranumApp/image/habitacion vip.jpg" alt="" />
-            </div>
-            <div class="campos_tarjeta titulo"><h3>habitacion x</h3></div>
-            <div class="campos_tarjeta descripcion">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolores eveniet cum officiis mollitia
-              omnis? Rerum sunt voluptates delectus minus deserunt aut possimus, maiores suscipit modi voluptas laborum!
-              Error, quae!
-            </div>
-            <div class="campos_tarjeta camas">1 cama king</div>
-            <div class="campos_tarjeta servicios">desayuno continental</div>
-            <div class="campos_tarjeta estadia">4 días y 3 noches</div>
-            <div class="campos_tarjeta reservar"><button class="button_reserva">reservar</button></div>
-          </div>
-          <!-- FIN TARJETA -->
-          <!-- INICIO TARJETA-->
-          <div class="container_habitacion col-lg-4 col-sm-12 col-md-6">
-            <div class="campos_tarjeta cont_imagen">
-              <img class="imagen" src="../../static/VeranumApp/image/habitacion vip.jpg" alt="" />
-            </div>
-            <div class="campos_tarjeta titulo"><h3>habitacion x</h3></div>
-            <div class="campos_tarjeta descripcion">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolores eveniet cum officiis mollitia
-              omnis? Rerum sunt voluptates delectus minus deserunt aut possimus, maiores suscipit modi voluptas laborum!
-              Error, quae!
-            </div>
-            <div class="campos_tarjeta camas">1 cama king</div>
-            <div class="campos_tarjeta servicios">desayuno continental</div>
-            <div class="campos_tarjeta estadia">4 días y 3 noches</div>
-            <div class="campos_tarjeta reservar"><button class="button_reserva">reservar</button></div>
-          </div>
-          <!-- FIN TARJETA -->
-          <!-- INICIO TARJETA-->
-          <div class="container_habitacion col-lg-4 col-sm-12 col-md-6">
-            <div class="campos_tarjeta cont_imagen">
-              <img class="imagen" src="../../static/VeranumApp/image/habitacion vip.jpg" alt="" />
-            </div>
-            <div class="campos_tarjeta titulo"><h3>habitacion x</h3></div>
-            <div class="campos_tarjeta descripcion">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolores eveniet cum officiis mollitia
-              omnis? Rerum sunt voluptates delectus minus deserunt aut possimus, maiores suscipit modi voluptas laborum!
-              Error, quae!
-            </div>
-            <div class="campos_tarjeta camas">1 cama king</div>
-            <div class="campos_tarjeta servicios">desayuno continental</div>
-            <div class="campos_tarjeta estadia">4 días y 3 noches</div>
-            <div class="campos_tarjeta reservar"><button class="button_reserva">reservar</button></div>
-          </div>
-          <!-- FIN TARJETA -->
+          {% endfor %}
         </div>
-
         <!-- INICIO TABLA -->
         <div class="container col-md-10 col-lg-10 col-sm-12 col-xs-12 pt-5">
           <h1>Servicios hoteles veranum</h1>

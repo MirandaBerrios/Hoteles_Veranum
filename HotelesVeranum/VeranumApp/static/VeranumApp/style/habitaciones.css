@@ -6,26 +6,14 @@
   min-height: 300px;
 }
 
-.titulo{
-  display: flex;
-  justify-content: center;
-  justify-self: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-size:xx-large;
-
+.habi{
+  text-align: center; 
+  margin-top: 2em;
+  margin-bottom: 2em;
+  color: rgb(16, 57, 85);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.buscar{
-
-margin-left: auto;
-margin-right: auto;
-margin-top: 20px;
-justify-content: center;
-display: flex;
-font-size: large;
-
-}
 
 .habitacion{
   background-color: rgb(245,246,250);
@@ -34,6 +22,8 @@ font-size: large;
   margin-bottom: 20px;
 }
 
-
-
-
+.campos_tarjeta{
+  color: rgb(16, 57, 85);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+}

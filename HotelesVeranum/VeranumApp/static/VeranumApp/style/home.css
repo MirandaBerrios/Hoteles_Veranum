@@ -17,7 +17,11 @@
 .campos_tarjeta {
   padding: 1em;
   border-top: solid 1px gainsboro;
-}
+  color: rgb(16, 57, 85);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  }
+
 .reservar {
   display: flex;
   justify-content: center;

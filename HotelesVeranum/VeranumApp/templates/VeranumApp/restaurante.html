@@ -59,10 +59,10 @@
     <!-- LATERAL -->
     <div class="container1 d-lg-flex d-xl-flex d-md-flex">
       <div class="navegador col-sm-12 col-md-12 col-lg-2 col-xl-2">
-        <a href="../VeranumApp/home.html" class="item_nav">Inicio</a>
-        <a href="../VeranumApp/habitaciones.html" class="item_nav">Habitaciones</a>
-        <a href="../VeranumApp/restaurante.html" class="item_nav">Restaurante</a>
-        <a href="../VeranumApp/acerca_nosotros.html" class="item_nav">Acerca de nosotros</a>
+        <a href="{% url 'home' %}" class="item_nav">Inicio</a>
+        <a href="{% url 'habitaciones' %}" class="item_nav">Habitaciones</a>
+        <a href="{% url 'restaurante' %}" class="item_nav">Restaurante</a>
+        <a href="{% url 'acerca_nosotros' %}" class="item_nav">Acerca de nosotros</a>
       </div>
       <!-- CUERPO -->
       <div class="cuerpo col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 m-auto">
